@@ -1,0 +1,11 @@
+Este directorio contiene una plantilla básica para comenzar a resolver el problema
+de Exercism
+
+Se aporta la definición de la clase (.h) con los dos constructores y el código mínimo necesario para que
+pasen los primeros tests.
+
+Se han incluído también los ficheros
+* Makefile
+* robot_simulator_main.cc
+
+Para compilar el programa de forma independiente de los tests de Exercism

@@ -1,0 +1,75 @@
+\hypertarget{tools_8cc}{}\doxysubsection{src/tools.cc File Reference}
+\label{tools_8cc}\index{src/tools.cc@{src/tools.cc}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+Include dependency graph for tools.\+cc\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{tools_8cc_aeac332c082069f54e8769d311dd2049d}{Usage}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{tools_8cc_aeac332c082069f54e8769d311dd2049d}\label{tools_8cc_aeac332c082069f54e8769d311dd2049d}} 
+\index{tools.cc@{tools.cc}!Usage@{Usage}}
+\index{Usage@{Usage}!tools.cc@{tools.cc}}
+\doxyparagraph{\texorpdfstring{Usage()}{Usage()}}
+{\footnotesize\ttfamily void Usage (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica. 
+
+\begin{DoxyAuthor}{Author}
+F. de Sande 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7.\+nov.\+2020
+\end{DoxyDate}
+Cada nuevo término de la serie de Fibonacci se genera sumando los dos anteriores. Comenzando con 0 y 1, los primeros 10 términos serán\+: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 Desarrolle en C++ un programa que calcule la suma de todos los términos de valor par de la serie que sean menores que 1000. \begin{DoxySeeAlso}{See also}
+\href{https://docs.google.com/document/d/1-3hTIVf8tPrbn9u0vs0Cm2IGyX1XBgv8hReVU0KOSUQ/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/document/d/1-\/3h\+T\+I\+Vf8t\+Prbn9u0vs0\+Cm2\+I\+Gy\+X1\+X\+Bgv8h\+Re\+V\+U0\+K\+O\+S\+U\+Q/edit?usp=sharing}} 
+
+stoi \href{http://www.cplusplus.com/reference/string/stoi/}{\texttt{ http\+://www.\+cplusplus.\+com/reference/string/stoi/}} An Object Oriented Version of the program\+: 
+
+\href{https://stackoverflow.com/questions/21360694/sum-of-even-fibonacci-numbers-under-1000}{\texttt{ https\+://stackoverflow.\+com/questions/21360694/sum-\/of-\/even-\/fibonacci-\/numbers-\/under-\/1000}} Muestra el modo de uso correcto del programa En caso de que el uso no sea el correcto, muestra el mensaje y finaliza la ejecución del programa. El programa precisa un único número natural para su ejecución.
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em argc} & Number of command line parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & Vector containing (char$\ast$) the parameters \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 33 of file tools.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33                                    \{}
+\DoxyCodeLine{34   \textcolor{keywordflow}{if} (argc != 2) \{}
+\DoxyCodeLine{35     std::cout << argv[0] << \textcolor{stringliteral}{": Falta un número natural como parámetro"} << std::endl;}
+\DoxyCodeLine{36     std::cout << \textcolor{stringliteral}{"Pruebe "} << argv[0] << \textcolor{stringliteral}{" -\/-\/help para más información"} << std::endl;}
+\DoxyCodeLine{37     exit(EXIT\_SUCCESS);}
+\DoxyCodeLine{38   \}}
+\DoxyCodeLine{39   std::string parameter\{argv[1]\};}
+\DoxyCodeLine{40   \textcolor{keywordflow}{if} (parameter == \textcolor{stringliteral}{"-\/-\/help"}) \{}
+\DoxyCodeLine{41     std::cout << \mbox{\hyperlink{tools_8h_a08728caac9a53278aea6a3218ae1dfeb}{kHelpText}} << std::endl;}
+\DoxyCodeLine{42     exit(EXIT\_SUCCESS);}
+\DoxyCodeLine{43   \}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+
+
+References k\+Help\+Text.
+
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:
+% FIG 1

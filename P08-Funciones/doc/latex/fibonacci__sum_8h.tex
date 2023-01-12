@@ -1,0 +1,84 @@
+\hypertarget{fibonacci__sum_8h}{}\doxysubsection{src/fibonacci\+\_\+sum.h File Reference}
+\label{fibonacci__sum_8h}\index{src/fibonacci\_sum.h@{src/fibonacci\_sum.h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{fibonacci__sum_8h_ac425b2614dbfd00399b158067d4015d2}{Fibonacci\+Sum}} (const size\+\_\+t k\+Limit)
+\begin{DoxyCompactList}\small\item\em Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{fibonacci__sum_8h_ac425b2614dbfd00399b158067d4015d2}\label{fibonacci__sum_8h_ac425b2614dbfd00399b158067d4015d2}} 
+\index{fibonacci\_sum.h@{fibonacci\_sum.h}!FibonacciSum@{FibonacciSum}}
+\index{FibonacciSum@{FibonacciSum}!fibonacci\_sum.h@{fibonacci\_sum.h}}
+\doxyparagraph{\texorpdfstring{FibonacciSum()}{FibonacciSum()}}
+{\footnotesize\ttfamily size\+\_\+t Fibonacci\+Sum (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{k\+Limit }\end{DoxyParamCaption})}
+
+
+
+Universidad de La Laguna Escuela Superior de Ingeniería y Tecnología Grado en Ingeniería Informática Informática Básica. 
+
+\begin{DoxyAuthor}{Author}
+F. de Sande 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7.\+nov.\+2020
+\end{DoxyDate}
+This file declares the \char`\"{}\+Help Text\char`\"{} constant and two functions
+
+\begin{DoxyAuthor}{Author}
+F. de Sande 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+7.\+nov.\+2020
+\end{DoxyDate}
+Cada nuevo término de la serie de Fibonacci se genera sumando los dos anteriores. Comenzando con 0 y 1, los primeros 10 términos serán\+: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 Desarrolle en C++ un programa que calcule la suma de todos los términos de valor par de la serie que sean menores que 1000. \begin{DoxySeeAlso}{See also}
+\href{https://docs.google.com/document/d/1-3hTIVf8tPrbn9u0vs0Cm2IGyX1XBgv8hReVU0KOSUQ/edit?usp=sharing}{\texttt{ https\+://docs.\+google.\+com/document/d/1-\/3h\+T\+I\+Vf8t\+Prbn9u0vs0\+Cm2\+I\+Gy\+X1\+X\+Bgv8h\+Re\+V\+U0\+K\+O\+S\+U\+Q/edit?usp=sharing}} 
+
+stoi \href{http://www.cplusplus.com/reference/string/stoi/}{\texttt{ http\+://www.\+cplusplus.\+com/reference/string/stoi/}} An Object Oriented Version of the program\+: 
+
+\href{https://stackoverflow.com/questions/21360694/sum-of-even-fibonacci-numbers-under-1000}{\texttt{ https\+://stackoverflow.\+com/questions/21360694/sum-\/of-\/even-\/fibonacci-\/numbers-\/under-\/1000}} Devuelve el valor de la suma de todos los términos de valor par de la serie de Fibonacci menores que k\+Limit
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k\+Limit.} & Se suman los términos pares menores que k\+Limit \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La suma de los términos pares menores que k\+Limit 
+\end{DoxyReturn}
+
+
+Definition at line 29 of file fibonacci\+\_\+sum.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                          \{}
+\DoxyCodeLine{30   \textcolor{keywordtype}{size\_t} second\_to\_last\{0\},  \textcolor{comment}{// Second to last term}}
+\DoxyCodeLine{31            last\{1\},          \textcolor{comment}{// Last term generated}}
+\DoxyCodeLine{32            new\_term\{0\};      \textcolor{comment}{// New term of the serie}}
+\DoxyCodeLine{33   \textcolor{keywordtype}{size\_t} sum\{0\};        \textcolor{comment}{// Accumulated sum of the terms}}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35   \textcolor{keywordflow}{while} (new\_term < kLimit) \{}
+\DoxyCodeLine{36     new\_term = last + second\_to\_last;}
+\DoxyCodeLine{37     \textcolor{keywordflow}{if} ((new\_term \% 2 == 0) \&\& (new\_term < kLimit)) \{}
+\DoxyCodeLine{38       sum += new\_term;}
+\DoxyCodeLine{39     \}}
+\DoxyCodeLine{40     \textcolor{comment}{// Uncomment for debug: print each new term}}
+\DoxyCodeLine{41     \textcolor{comment}{// std::cout << "Term: " << new\_term << std::endl;}}
+\DoxyCodeLine{42     second\_to\_last = last;}
+\DoxyCodeLine{43     last = new\_term;}
+\DoxyCodeLine{44   \}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46   \textcolor{keywordflow}{return} sum;}
+\DoxyCodeLine{47 \}}
+
+\end{DoxyCode}
+
+
+Referenced by main().
+
+Here is the caller graph for this function\+:
+% FIG 1

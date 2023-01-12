@@ -1,0 +1,3 @@
+Hola mi nombre es Raúl, y estoy haciendo una prueba para mi último programa,
+espero que funcione y que salga el resultado esperado, para poder aprobar la
+siguiente práctica.

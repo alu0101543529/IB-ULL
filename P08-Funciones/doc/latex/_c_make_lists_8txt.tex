@@ -1,0 +1,108 @@
+\hypertarget{_c_make_lists_8txt}{}\doxysubsection{C\+Make\+Lists.\+txt File Reference}
+\label{_c_make_lists_8txt}\index{CMakeLists.txt@{CMakeLists.txt}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_make_lists_8txt_ac26c854f3578d99d959a810594580d7f}{cmake\+\_\+minimum\+\_\+required}} (V\+E\+R\+S\+I\+ON 3.\+1) project(fibonacci\+\_\+sum V\+E\+R\+S\+I\+ON 1.\+0 D\+E\+S\+C\+R\+I\+P\+T\+I\+ON \char`\"{}A simple C\+Make project for the Fibonacci Sum application\char`\"{} L\+A\+N\+G\+U\+A\+G\+ES C\+XX) \mbox{\hyperlink{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}{set}}(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+S\+T\+A\+N\+D\+A\+RD 17) \mbox{\hyperlink{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}{set}}(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+S\+T\+A\+N\+D\+A\+R\+D\+\_\+\+R\+E\+Q\+U\+I\+R\+ED True) \mbox{\hyperlink{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}{set}}(E\+X\+E\+C\+U\+T\+A\+B\+L\+E\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+A\+TH \$
+\item 
+build \mbox{\hyperlink{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}{set}} (L\+I\+B\+R\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+A\+TH \$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/lib) set(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+F\+L\+A\+G\+S\+\_\+\+D\+E\+B\+UG \char`\"{}-\/g -\/O0 -\/Wall -\/Wextra -\/Wpedantic -\/Weffc++\char`\"{}) set(C\+M\+A\+K\+E\+\_\+\+C\+X\+X\+\_\+\+F\+L\+A\+G\+S\+\_\+\+R\+E\+L\+E\+A\+SE \char`\"{}-\/O3\char`\"{}) include\+\_\+directories(\$
+\item 
+src \mbox{\hyperlink{_c_make_lists_8txt_a95d8e24a8a17f23eb3c5d17f54dcb7b6}{add\+\_\+library}} (tools src/tools.\+cc) add\+\_\+executable(fibonacci\+\_\+sum src/fibonacci\+\_\+sum.\+h src/fibonacci\+\_\+sum.\+cc src/fibonacci\+\_\+main.\+cc) target\+\_\+link\+\_\+libraries(fibonacci\+\_\+sum tools) target\+\_\+compile\+\_\+features(fibonacci\+\_\+sum P\+R\+I\+V\+A\+TE cxx\+\_\+std\+\_\+17) target\+\_\+compile\+\_\+options(fibonacci\+\_\+sum P\+R\+I\+V\+A\+TE -\/Wall -\/Wextra -\/Wpedantic -\/Weffc++) find\+\_\+package(Doxygen) option(B\+U\+I\+L\+D\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+A\+T\+I\+ON \char`\"{}Create and install the documentation (requires Doxygen)\char`\"{} \$
+\item 
+\mbox{\hyperlink{_c_make_lists_8txt_a7651e758ce3d4ae7035ec0025c41cae2}{if}} (B\+U\+I\+L\+D\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+A\+T\+I\+ON) if(N\+OT D\+O\+X\+Y\+G\+E\+N\+\_\+\+F\+O\+U\+ND) message(F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR \char`\"{}Doxygen is needed to build the documentation.\char`\"{}) endif() \mbox{\hyperlink{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}{set}}(doxyfile\+\_\+in \$
+\item 
+fibonacci Doxyfile \mbox{\hyperlink{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}{set}} (doxyfile \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/doxyfile) configure\+\_\+file(\$
+\end{DoxyCompactItemize}
+
+
+\doxysubsubsection{Function Documentation}
+\mbox{\Hypertarget{_c_make_lists_8txt_a95d8e24a8a17f23eb3c5d17f54dcb7b6}\label{_c_make_lists_8txt_a95d8e24a8a17f23eb3c5d17f54dcb7b6}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!add\_library@{add\_library}}
+\index{add\_library@{add\_library}!CMakeLists.txt@{CMakeLists.txt}}
+\doxyparagraph{\texorpdfstring{add\_library()}{add\_library()}}
+{\footnotesize\ttfamily src add\+\_\+library (\begin{DoxyParamCaption}\item[{tools src/tools.}]{cc }\end{DoxyParamCaption})}
+
+
+
+Definition at line 44 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{64        :\textcolor{comment}{//stackoverflow.com/questions/34878276/build-\/doxygen-\/from-\/cmake-\/script}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\# https://cmake.org/cmake/help/latest/module/FindDoxygen.html}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68 find\_package(Doxygen)}
+\DoxyCodeLine{69 option(BUILD\_DOCUMENTATION \textcolor{stringliteral}{"Create and install the documentation (requires Doxygen)"} \$\{DOXYGEN\_FOUND\})}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_make_lists_8txt_ac26c854f3578d99d959a810594580d7f}\label{_c_make_lists_8txt_ac26c854f3578d99d959a810594580d7f}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!cmake\_minimum\_required@{cmake\_minimum\_required}}
+\index{cmake\_minimum\_required@{cmake\_minimum\_required}!CMakeLists.txt@{CMakeLists.txt}}
+\doxyparagraph{\texorpdfstring{cmake\_minimum\_required()}{cmake\_minimum\_required()}}
+{\footnotesize\ttfamily cmake\+\_\+minimum\+\_\+required (\begin{DoxyParamCaption}\item[{V\+E\+R\+S\+I\+ON 3.}]{1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line 20 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32                                     :}
+\DoxyCodeLine{33 \mbox{\hyperlink{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}{set}}(EXECUTABLE\_OUTPUT\_PATH \$\{PROJECT\_SOURCE\_DIR\}/build)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_make_lists_8txt_a7651e758ce3d4ae7035ec0025c41cae2}\label{_c_make_lists_8txt_a7651e758ce3d4ae7035ec0025c41cae2}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!if@{if}}
+\index{if@{if}!CMakeLists.txt@{CMakeLists.txt}}
+\doxyparagraph{\texorpdfstring{if()}{if()}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{B\+U\+I\+L\+D\+\_\+\+D\+O\+C\+U\+M\+E\+N\+T\+A\+T\+I\+ON}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 71 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{76                      \{CMAKE\_CURRENT\_SOURCE\_DIR\}/fibonacci.Doxyfile)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}\label{_c_make_lists_8txt_a6bc98466a67558576f76595db1f07324}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily fibonacci Doxyfile set (\begin{DoxyParamCaption}\item[{doxyfile \$\{C\+M\+A\+K\+E\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+I\+N\+A\+R\+Y\+\_\+\+D\+IR\}/}]{doxyfile }\end{DoxyParamCaption})}
+
+
+
+Definition at line 77 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77                   \{CMAKE\_CURRENT\_BINARY\_DIR\}/doxyfile)}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79     configure\_file(\$\{doxyfile\_in\} \$\{doxyfile\} @ONLY)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}\label{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}} 
+\index{CMakeLists.txt@{CMakeLists.txt}!set@{set}}
+\index{set@{set}!CMakeLists.txt@{CMakeLists.txt}}
+\doxyparagraph{\texorpdfstring{set()}{set()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily build set (\begin{DoxyParamCaption}\item[{L\+I\+B\+R\+A\+R\+Y\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+A\+TH \$\{P\+R\+O\+J\+E\+C\+T\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+D\+IR\}/}]{lib }\end{DoxyParamCaption})}
+
+
+
+Definition at line 34 of file C\+Make\+Lists.\+txt.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                          \{PROJECT\_SOURCE\_DIR\}/lib)}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \# Debug and release flags}
+\DoxyCodeLine{37 \mbox{\hyperlink{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}{set}}(CMAKE\_CXX\_FLAGS\_DEBUG \textcolor{stringliteral}{"-\/g -\/O0 -\/Wall -\/Wextra -\/Wpedantic -\/Weffc++"})}
+\DoxyCodeLine{38 \mbox{\hyperlink{_c_make_lists_8txt_a6dd493b553f330d06c118c3bfad17203}{set}}(CMAKE\_CXX\_FLAGS\_RELEASE \textcolor{stringliteral}{"-\/O3"})}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\# tell cmake where to look for *.h files}}
+\DoxyCodeLine{41 include\_directories(\$\{PROJECT\_SOURCE\_DIR\}/src)}
+
+\end{DoxyCode}
