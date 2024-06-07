@@ -76,7 +76,6 @@ void Racional::Resta (Racional racional1, Racional racional2) {
  * @param[in] racional1: referencia al primer número racional a multiplicar.
  * @param[in] racional2: referencia al segundo número racional a multiplicar.
 */
-
 void Racional::Multiplicacion (Racional racional1, Racional racional2) {
   int numerador = racional1.numerador_ * racional2.numerador_;
   int denominador = racional1.denominador_ * racional2.denominador_;
@@ -88,7 +87,6 @@ void Racional::Multiplicacion (Racional racional1, Racional racional2) {
  * @param[in] racional1: referencia al primer número racional a dividir.
  * @param[in] racional2: referencia al segundo número racional a dividir.
 */
-
 void Racional::Division (Racional racional1, Racional racional2) {
   int numerador = racional1.numerador_ * racional2.denominador_;
   int denominador = racional1.denominador_ * racional2.numerador_;
